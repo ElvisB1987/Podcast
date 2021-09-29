@@ -21,4 +21,11 @@ section {
     justify-content: space-between;
     background-color: #121725;
     min-height: 500px;
+    transform: translateY(-45px);
+  
+}
+.down{
+  display: flex;
+    flex-direction: column;
+    row-gap: 30px;
 }
