@@ -4,8 +4,8 @@ var warning = document.createElement("p");
 warning.classList.add("atention")
 
 
-submit.addEventListener("submit", function checkEmail() {
-    event.preventDefault();
+submit.addEventListener("submit", function checkEmail(e) {
+    e.preventDefault();
 
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
@@ -14,5 +14,7 @@ submit.addEventListener("submit", function checkEmail() {
         submit.appendChild(warning);
         email.focus;
         return false;
+    } else {
+        warning.remove();
     }
 });
