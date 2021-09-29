@@ -162,7 +162,8 @@ input {
     transform: none;
     width: 90%; }
   .down {
-    flex-direction: column-reverse; }
+    flex-direction: column-reverse;
+    row-gap: 20px; }
   form {
     display: flex;
     justify-content: space-between;
