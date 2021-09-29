@@ -1,20 +1,20 @@
 var email = document.querySelector("input[type=text]");
 var submit = document.querySelector("form");
 var warning = document.createElement("p");
-warning.classList.add("atention")
-
+warning.classList.add("atention");
 
 submit.addEventListener("submit", function checkEmail(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  var filter =
+    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-    if (!filter.test(email.value)) {
-        warning.innerHTML = "Oops! Please add your email";
-        submit.appendChild(warning);
-        email.focus;
-        return false;
-    } else {
-        warning.remove();
-    }
+  if (!filter.test(email.value)) {
+    warning.innerHTML = "Oops! Please add your email";
+    submit.appendChild(warning);
+    email.focus;
+    return false;
+  } else {
+    warning.remove();
+  }
 });
